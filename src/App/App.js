@@ -10,7 +10,7 @@ export class App extends Component {
       userInfo: null,
       repos: [],
       starreds: [],
-      message: "Record not found",
+      message: "Search a GitHub user!",
     };
   }
 
