@@ -12,6 +12,7 @@ export const Bio = ({
   starred,
   getUserRepos,
   getUserStarreds,
+  message,
 }) => {
   return (
     <div className="smart-container panel">
@@ -78,6 +79,13 @@ export const Bio = ({
                 repos={starred}
               />
             )}
+          </div>
+        </div>
+      )}
+      {!showBio && (
+        <div className="header">
+          <div className="user-info">
+            <h1>{message}</h1>
           </div>
         </div>
       )}

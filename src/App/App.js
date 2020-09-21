@@ -10,6 +10,7 @@ export class App extends Component {
       userInfo: null,
       repos: [],
       starreds: [],
+      message: "Record not found",
     };
   }
 
@@ -25,11 +26,26 @@ export class App extends Component {
     const keyCode = e.which || e.keyCode;
     const ENTER = 13;
 
+    const headers = new Headers();
+    const header = {
+      method: "GET",
+      headers: headers,
+      mode: "cors",
+      cache: "default",
+    };
+
     if (keyCode === ENTER) {
       if (value) {
         this.setState({ show: true });
-        fetch(this.getGitHubApiUrl(value))
-          .then((data) => data.json())
+        fetch(this.getGitHubApiUrl(value), header)
+          .then((data) => {
+            if (!data.ok)
+              this.setState({
+                show: false,
+                message: data.statusText,
+              });
+            return data.json();
+          })
           .then((data) => {
             this.setState({
               userInfo: {
@@ -43,6 +59,7 @@ export class App extends Component {
               },
               repos: [],
               starred: [],
+              message: data.message,
             });
           });
       } else {
@@ -84,6 +101,7 @@ export class App extends Component {
           handleSearch={(e) => this.getDataGitHubUser(e)}
           getUserRepos={() => this.getUserRepos("repos")}
           getUserStarreds={() => this.getUserRepos("starred")}
+          message={this.state.message}
         />
       </div>
     );

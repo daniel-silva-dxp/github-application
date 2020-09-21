@@ -11,6 +11,7 @@ export const Home = ({
   handleSearch,
   getUserRepos,
   getUserStarreds,
+  message,
 }) => {
   return (
     <div>
@@ -26,6 +27,7 @@ export const Home = ({
         starred={starred}
         getUserRepos={getUserRepos}
         getUserStarreds={getUserStarreds}
+        message={message}
       />
     </div>
   );
