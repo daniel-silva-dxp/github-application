@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore|Roboto+Mono:100,300,400,500,700|Roboto:100,300,400,500,700&display=swap");
+
+/* VARIÁVEIS */
+:root {
+  --theme-color: #28f5be;
+  --primary-color-0: #1e1e1e;
+  --primary-color-1: #232323;
+  --grey-color: #565656;
+  --red-color: #fd5872;
+  --purple-color: #3e3b56;
+  --white-color: #fff;
+  --body-color: #f8f8f8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  vertical-align: baseline;
+}
+html,
+body {
+  background-color: var(--body-color);
+  color: var(--primary-color-0);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+span {
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button {
+  outline: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-apparance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

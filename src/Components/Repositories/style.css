@@ -1,0 +1,27 @@
+.repos,
+.starred {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.repos h4,
+.starred h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.repos ul,
+.starred ul {
+  list-style: square;
+  margin: 0 0 0 10px;
+}
+.repos ul li,
+.starred ul li {
+  padding: 3px 0;
+  font-size: 0.8em;
+  color: #232426;
+}
+.repos ul li:nth-of-type(2n + 1),
+.starred ul li:nth-of-type(2n + 1) {
+  background: #f8f8f8;
+}

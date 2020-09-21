@@ -1,0 +1,45 @@
+.welcome-box {
+  margin: 80px 0 20px;
+  height: table;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.welcome-title {
+  align-self: center;
+  padding: 10px;
+}
+.welcome-title h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--purple-color);
+}
+.welcome-title p {
+  font-size: 12px;
+  color: var(--red-color);
+}
+.welcome-image {
+  width: 100%;
+  max-width: 300px;
+  align-self: flex-end;
+}
+
+@media (max-width: 540px) {
+  .welcome-box {
+    padding: 10px;
+  }
+  .flex-container {
+    flex-direction: column-reverse;
+  }
+  .welcome-image {
+    align-self: center;
+  }
+}
+
+@media (min-width: 541px) {
+  .welcome-box {
+    max-height: 120px;
+  }
+}

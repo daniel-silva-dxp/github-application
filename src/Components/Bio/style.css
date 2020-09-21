@@ -1,0 +1,109 @@
+.smart-container {
+  width: 100%;
+  height: table;
+  padding: 20px;
+  margin: 0 auto;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: table;
+  padding: 20px;
+  border-radius: 25px 25px 0 0;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  margin: 0 auto;
+}
+.header .header-bar {
+  max-width: 250px;
+  height: 15px;
+  background-color: var(--white-color);
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+.header nav {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header .photo {
+  margin: 0 auto;
+  max-width: 90px;
+  border: 2px solid var(--white-color);
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+.header .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user-info h1 a {
+  font-size: 0.7em;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.user-info h1 a:hover {
+  color: var(--purple-color);
+}
+.user-info h4 {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.social-info {
+  max-width: 350px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.flex-container li {
+  font-family: "Roboto Mono", monospace;
+  width: calc(100% / 3);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex-container li:nth-child(1),
+.flex-container li:nth-child(2) {
+  border-right: 1px solid var(--white-color);
+  font-family: "Roboto Mono", monospace;
+}
+.flex-container li > span {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.flex-container li span:last-child {
+  font-size: 16px;
+}
+.user-info p {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 7px !important;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--grey-color) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-color) !important;
+}
