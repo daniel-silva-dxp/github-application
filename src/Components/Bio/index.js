@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { GetRepos } from "../GetRepos";
 import { Repositories } from "../Repositories";
+import { Preloader } from "../Preloader";
 
 import "./style.css";
 
@@ -89,6 +90,7 @@ export const Bio = ({
           </div>
         </div>
       )}
+      <Preloader />
     </div>
   );
 };

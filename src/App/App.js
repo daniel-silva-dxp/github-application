@@ -42,6 +42,9 @@ export class App extends Component {
             if (!data.ok)
               this.setState({
                 show: false,
+                userInfo: null,
+                repos: [],
+                starreds: [],
                 message: data.statusText,
               });
             return data.json();
