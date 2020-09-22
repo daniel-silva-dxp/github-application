@@ -37,7 +37,6 @@ export class App extends Component {
     e.persist();
     if (keyCode === ENTER) {
       this.setState({ isFetching: true });
-      e.target.disabled = true;
       e.target.value = "";
       if (value) {
         this.setState({ show: true });
