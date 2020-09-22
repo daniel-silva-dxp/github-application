@@ -14,6 +14,7 @@ export const Bio = ({
   getUserRepos,
   getUserStarreds,
   message,
+  isFetching,
 }) => {
   return (
     <div className="smart-container panel">
@@ -90,7 +91,8 @@ export const Bio = ({
           </div>
         </div>
       )}
-      <Preloader />
+
+      {isFetching && <Preloader />}
     </div>
   );
 };

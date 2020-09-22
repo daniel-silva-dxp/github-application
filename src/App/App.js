@@ -6,6 +6,7 @@ export class App extends Component {
   constructor() {
     super();
     this.state = {
+      isFetching: false,
       show: false,
       userInfo: null,
       repos: [],
@@ -33,8 +34,11 @@ export class App extends Component {
       mode: "cors",
       cache: "default",
     };
-
+    e.persist();
     if (keyCode === ENTER) {
+      this.setState({ isFetching: true });
+      e.target.disabled = true;
+      e.target.value = "";
       if (value) {
         this.setState({ show: true });
         fetch(this.getGitHubApiUrl(value), header)
@@ -64,9 +68,11 @@ export class App extends Component {
               starred: [],
               message: data.message,
             });
-          });
+          })
+          .finally(() => this.setState({ isFetching: false }));
       } else {
         this.setState({
+          isFetching: false,
           show: false,
           userInfo: null,
           repos: [],
@@ -105,6 +111,7 @@ export class App extends Component {
           getUserRepos={() => this.getUserRepos("repos")}
           getUserStarreds={() => this.getUserRepos("starred")}
           message={this.state.message}
+          isFetching={this.state.isFetching}
         />
       </div>
     );

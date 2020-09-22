@@ -12,6 +12,7 @@ export const Home = ({
   getUserRepos,
   getUserStarreds,
   message,
+  isFetching,
 }) => {
   return (
     <div>
@@ -28,6 +29,7 @@ export const Home = ({
         getUserRepos={getUserRepos}
         getUserStarreds={getUserStarreds}
         message={message}
+        isFetching={isFetching}
       />
     </div>
   );
